@@ -49,3 +49,48 @@ header {
       margin-left: 150px;
       
   }
+
+  
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 370px;
+    padding-top: 115px;
+    margin: auto;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    justify-self:center;
+  }
+
+  form button{
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }  
+
+  .botao{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 140px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  #prod{
+    margin-right: 100px;
+  }
+
+  #cat{
+      margin-right: 40px;
+  }
+
+
+ 
+
+  
