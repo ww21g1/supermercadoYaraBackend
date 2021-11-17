@@ -1,0 +1,26 @@
+.table-bordered td, .table-bordered th {
+    border: 1px
+ solid #1a1b1b;
+}
+
+.table th, .table td {
+    padding: 0.7rem;
+}
+
+.table td{
+    padding: 0.5%;
+}
+
+button{
+    height: 32px;
+    margin-top: 4px;
+    margin-right: 20px;
+}
+
+.botoes{
+    display: flex;
+    
+}
+
+
+
