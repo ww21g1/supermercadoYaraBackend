@@ -1,18 +1,19 @@
 import React from 'react';
 
-import Login from './views/home/login'
+//import Login from './views/Login'
+import UsuarioCadastro from './views/UsuarioCadastro'
 import './css/global.css'
-import Header from './views/home/HeaderLogin';
-import Footer from './views/home/Footer';
+//import Header from './components/home/HeaderLogin';
+//import Footer from './components/home/Footer';
 
 import 'bootswatch/dist/lux/bootstrap.css'
+import HeaderAdm from './components/comuns/HeaderAdm';
 
 function App() {
   return (
     <div>
-      <Header></Header>
-      <Login></Login>
-      <Footer></Footer>
+      <HeaderAdm/>
+      <UsuarioCadastro/>
       
     </div>
   );

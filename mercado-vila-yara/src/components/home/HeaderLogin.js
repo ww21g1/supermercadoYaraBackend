@@ -11,7 +11,7 @@ class Header extends React.Component{
             <nav className="container d-flex flex-column flex-md-row justify-content-between">
             
             
-                <img src="../../assets/logo10.png" alt="Logo do supermercado Vila Yara" width="70" height="60"  class="d-block mx-auto"/>
+                <img src="../../assets/logo10.png" alt="Logo do supermercado Vila Yara" width="70" height="60"  className="d-block mx-auto"/>
             
                 
                 <a href="#">Supermercado Vila Yara</a>
