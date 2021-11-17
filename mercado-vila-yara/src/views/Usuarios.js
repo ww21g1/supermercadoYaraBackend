@@ -1,13 +1,19 @@
 import React from "react";
 
 import '../css/usuarios/usuarios.css'
+import { withRouter } from'react-router-dom'
 
 
 class Usuarios extends React.Component{
 
+    prepareCadastrar = () => {
+        this.props.history.push('/cadastrousuario')
+      }
+
      render(){
         return(
-            
+            <>
+            <button onClick={this.prepareCadastrar} id="cadastro" className="btn btn-primary">Cadastrar Usuário</button>
             <div class="container">
                    
             <table class="table table-bordered">
@@ -41,9 +47,10 @@ class Usuarios extends React.Component{
             </tbody>
             </table>
         </div>
+        </>
         );
     }
 
 }
 
-export default Usuarios
+export default withRouter (Usuarios)

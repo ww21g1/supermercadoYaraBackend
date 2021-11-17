@@ -11,7 +11,7 @@
     padding: 0.5%;
 }
 
-button{
+.w-10{
     height: 32px;
     margin-top: 4px;
     margin-right: 20px;
@@ -20,6 +20,11 @@ button{
 .botoes{
     display: flex;
     
+}
+
+#cadastro{
+  margin-left: 60%;
+  margin-bottom: 10px;
 }
 
 

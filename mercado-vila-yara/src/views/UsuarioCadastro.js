@@ -2,6 +2,8 @@ import React from "react";
 
 import '../css/usuarios/usuarioCadastro.css'
 
+
+
 class UsuarioCadastro extends React.Component{
 
     state = { 
@@ -21,6 +23,7 @@ class UsuarioCadastro extends React.Component{
         
       }
 
+     
     render(){
         return(
             <form>
@@ -80,4 +83,4 @@ class UsuarioCadastro extends React.Component{
 
 }
 
-export default UsuarioCadastro
+export default UsuarioCadastro 

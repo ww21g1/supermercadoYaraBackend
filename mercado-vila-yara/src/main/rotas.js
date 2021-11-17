@@ -15,7 +15,7 @@ function Rotas(){
            
                 <Route path="/login" component={Login} />
                 <Route path="/cadastrousuario" component={UsuarioCadastro} />
-                <Route path="/UsuarioS" component={Usuarios} />                
+                <Route path="/Usuarios" component={Usuarios} />                
            
         </BrowserRouter>
     )
