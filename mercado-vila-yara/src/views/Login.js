@@ -1,6 +1,7 @@
 import React from "react";
 
 import '../css/home/login.css'
+import axios from "axios";
 
 class Login extends React.Component{
 
@@ -10,9 +11,15 @@ class Login extends React.Component{
   }
 
   entrar = () => {
-    console.log('Email: ', this.state.email);
-    console.log('Senha: ', this.state.senha);
-  }
+    axios.post('https://yarasupermercado.herokuapp.com/login', {
+        email: this.state.email,
+        senha: this.state.senha
+    }).then( response => {
+      console.log(response);
+    }).catch( erro => {
+      console.log(erro.response)
+  })
+}
 
     render(){
         return(
