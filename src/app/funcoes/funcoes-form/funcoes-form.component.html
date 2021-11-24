@@ -1,0 +1,32 @@
+<h1 class="mt-4">Cadastro de Função</h1>
+   
+<div class="container">
+        <form #FuncaoForm="ngForm" (ngSubmit)="onSubmit()">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-success" role="alert" *ngIf= "success == true">
+                    </div>
+                    Função salva com sucesso.
+                      <div class="alert alert-danger" role="alert" *ngFor="let erro of errors"> 
+                        {{erro}}
+                      </div>
+                </div>
+            </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input class="form-control" id="nome" type="text" placeholder="Nome" [(ngModel)]="funcao.nome" name="nome">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary"> 
+                <i class="fa fa-save"></i> Cadastrar Função</button>
+            </div>
+        </div>
+    </form>
+</div>

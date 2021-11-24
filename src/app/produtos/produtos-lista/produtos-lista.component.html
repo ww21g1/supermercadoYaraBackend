@@ -1,0 +1,40 @@
+<h1 class="mt-4">Produtos</h1>
+
+<label for="nome">Procurar Produtos</label>
+<input class="form-control col-md-6" id="procurar" type="text" placeholder="Produto" >
+    
+    <div class="col-md-2">
+        <button type="submit" class="btn btn-primary" routerLink="/produtos/cadastro"> 
+        <i class="fa fa-save"></i> Cadastrar Produto</button>
+    </div>
+
+    <div class="container-fluid">        
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Categoria</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let produto of produtos"> 
+                        <td>{{ produto.nome }}</td>
+                        <td>{{ produto.descricao }}</td>
+                        <td>{{ produto.nomeCategoria }}</td>
+                        <td>{{ produto.imagem }}</td>
+                        <td>{{ produto.precoUnitario }}</td>
+                        <td>{{ produto.quantidade }}</td>  
+                        <td>
+                            <i class="fas fa-edit"></i>
+                            <i class="fas fa-trash-alt"></i>
+                        </td>                           
+                    </tr>  
+                </tbody>
+            </table>
+        </div>
+    </div>

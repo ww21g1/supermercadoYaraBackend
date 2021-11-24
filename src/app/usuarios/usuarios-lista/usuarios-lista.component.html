@@ -1,0 +1,77 @@
+<h1 class="mt-4">Usuários</h1>
+
+<label for="nome">Procurar Usuários</label>
+<input class="form-control col-md-6" id="procurar" type="text" placeholder="Usuario" >
+    
+    <div class="col-md-2">
+        <button type="submit" class="btn btn-primary" routerLink="/usuarios/cadastro"> 
+        <i class="fa fa-save"></i> Cadastrar Usuário</button>
+    </div>
+
+    <div class="container-fluid">     
+        
+        <div class="row">
+            <div class="col-md-12">
+    
+                <div class="alert alert-success" role="alert" *ngIf="mensagemSucesso">
+                    {{ mensagemSucesso }}  
+                </div>
+    
+                <div class="alert alert-danger" role="alert" *ngIf="mensagemErro">
+                    {{ mensagemErro  }}    
+                </div>
+            </div>
+        </div>
+        
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>
+                        <th>Username</th>
+                        <th>Função</th>
+                        <th>Email</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let usuario of usuarios"> 
+                        <td>{{ usuario.nome }}</td>
+                        <td>{{ usuario.sobrenome }}</td>
+                        <td>{{ usuario.userName }}</td>
+                        <td>{{ usuario.nomeFuncao }}</td>
+                        <td>{{ usuario.email }}</td>  
+                        <td>
+                            <button class="btn btn-primary" routerLink="//usuarios/cadastro/{{ usuario.id }}">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-danger" (click)="preparaDelecao(usuario)" data-toggle="modal" data-target="#modalDelecao">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </td>                           
+                    </tr>                                        
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="modalDelecao" class="modal fade role="dialog>
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h4>Confirmação</h4>
+                    </div>
+                    <div class="modal-body" *ngIf="usuarioSelecionado">
+                        Confirma a exclusão de {{ usuarioSelecionado.nome }} {{ usuarioSelecionado.sobrenome }}?
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-success" (click)="deletarUsuario()" data-dismiss="modal">Sim</button>
+                        <button class="btn btn-danger" data-dismiss="modal">Não</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>

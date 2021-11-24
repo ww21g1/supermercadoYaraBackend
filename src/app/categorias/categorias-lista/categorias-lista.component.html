@@ -1,0 +1,31 @@
+<h1 class="mt-4">Categorias</h1>
+
+<label for="nome">Procurar Categorias</label>
+<input class="form-control col-md-6" id="procurar" type="text" placeholder="Categorias" >
+    
+    <div class="col-md-2">
+        <button type="submit" class="btn btn-primary" routerLink="/categorias/cadastro"> 
+        <i class="fa fa-save"></i> Cadastrar Categoria</button>
+    </div>
+    
+    <div class="container-fluid">        
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                 <tbody>
+                    <tr *ngFor="let categoria of categorias">
+                        <td>{{ categoria.nome }}</td>
+                        <td>
+                            <i class="fas fa-edit"></i>
+                            <i class="fas fa-trash-alt"></i>
+                        </td> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+            </div>

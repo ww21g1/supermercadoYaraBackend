@@ -1,0 +1,57 @@
+<h1 class="mt-4">{{ this.id == undefined ? 'Cadastro de Usuario' : 'Edição de Usuario' }}</h1>
+   
+<div class="container">
+    <form #usuarioForm="ngForm" (ngSubmit)="onSubmit()">
+       
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-success" role="alert" *ngIf= "success == true">
+                    Usuario salvo com sucesso.
+                  </div>
+                  <div class="alert alert-danger" role="alert" *ngFor="let erro of errors"> 
+                    {{erro}}
+                  </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input class="form-control" id="nome" type="text" placeholder="Nome" [(ngModel)]="usuario.nome" name="nome">
+                    
+                    <label for="nome">Sobrenome</label>
+                    <input class="form-control" id="sobrenome" type="text" placeholder="Sobrenome" [(ngModel)]="usuario.sobrenome" name="sobrenome">
+
+                    <label for="user">Username</label>
+                    <input class="form-control" id="user" type="text" placeholder="Username" [(ngModel)]="usuario.userName" name="userName">
+                    
+                    <label for="funcao" id="funcao">Função</label>
+                    <select class="form-control" id="nomeFuncao" [(ngModel)]="usuario.nomeFuncao" name="nomeFuncao">
+                        <option>Administrador</option>
+                        <option>Outro</option>                        
+                      </select>
+
+                    <label for="email">Email</label>
+                    <input class="form-control" id="email" type="email" placeholder="Digite o email" [(ngModel)]="usuario.email" name="email">
+
+                    <label for="senha">Senha</label>
+                    <input class="form-control" id="senha" type="password" placeholder="Digite a senha" [(ngModel)]="usuario.senha" name="senha">
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary" *ngIf="this.id == undefined "> 
+                <i class="fa fa-save"></i> Cadastrar Usuario</button>
+            </div>
+
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary" *ngIf="this.id != undefined "> 
+                <i class="fa fa-sync-alt"></i> Atualizar Usuario</button>
+            </div>
+
+        </div>
+    </form>
+</div>
