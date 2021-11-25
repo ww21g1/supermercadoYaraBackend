@@ -1,7 +1,13 @@
-<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-  <h1 class="navbar-brand" >Mercado Vila Yara</h1>          
-</nav>
 
+<app-navbar></app-navbar>
 
-<router-outlet></router-outlet>
-      
+<div id="layoutSidenav">
+  <app-sidebar></app-sidebar>
+  <div id="layoutSidenav_content">
+    <main>
+      <div class="container-fluid">
+        <router-outlet></router-outlet>
+      </div>      
+    </main>
+  </div>
+</div>
