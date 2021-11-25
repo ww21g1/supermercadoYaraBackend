@@ -1,13 +1,15 @@
-<h1 class="mt-4">Usuários</h1>
 
-<label for="nome">Procurar Usuários</label>
-<input class="form-control col-md-6" id="procurar" type="text" placeholder="Usuario" >
-    
-    <div class="col-md-2">
-        <button type="submit" class="btn btn-primary" routerLink="/usuarios/cadastro"> 
-        <i class="fa fa-save"></i> Cadastrar Usuário</button>
+
+
+<div class="container">
+    <div style="margin-top: 50px" ></div>
+    <h1 class="mt-4">Usuários</h1>
+    <div style="margin-top: 25px" ></div>
+    <div class="col-lg-4">
+        <button type="submit" class="btn btn-warning" id="comum" routerLink="/usuarios/cadastro"> 
+        <i class="fa fa-plus"></i> Novo usuario</button>
     </div>
-
+    <div style="margin-top: 25px" ></div>
     <div class="container-fluid">     
         
         <div class="row">
@@ -43,12 +45,15 @@
                         <td>{{ usuario.nomeFuncao }}</td>
                         <td>{{ usuario.email }}</td>  
                         <td>
-                            <button class="btn btn-primary" routerLink="//usuarios/cadastro/{{ usuario.id }}">
+                            <div class="row-lg-4">
+                            <button class="btn btn-primary" style="margin-right: 8px" routerLink="//usuarios/cadastro/{{ usuario.id }}">
                                 <i class="fas fa-edit"></i>
                             </button>
-                            <button class="btn btn-danger" (click)="preparaDelecao(usuario)" data-toggle="modal" data-target="#modalDelecao">
+                            <button class="btn btn-danger" id="deletar" (click)="preparaDelecao(usuario)" data-toggle="modal" data-target="#modalDelecao">
                                 <i class="fas fa-trash-alt"></i>
                             </button>
+                        </div>
+                            
                         </td>                           
                     </tr>                                        
                 </tbody>
@@ -73,5 +78,5 @@
                 </div>
             </div>
         </div>
-
+    </div>
     </div>
